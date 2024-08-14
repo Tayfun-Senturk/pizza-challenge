@@ -10,19 +10,19 @@ import QuantitySelector from './QuantitySelector';
 import OrderSummary from './OrderSummary';
 import Name from './Name';
 
-const Form = ({ onChange,quantity,extras }) => {
+const Form = ({ onChange,quantity,extras,data }) => {
   return (
     <>
     <form>
       <Header />
-      <PizzaDetail onChange={onChange} />
-      <SizeSelection onChange={onChange} />
-      <Hamur onChange={onChange} />
-      <Extras onChange={onChange} extras={extras}/>
-      <Name onChange={onChange} />
-      <OrderNote onChange={onChange} />
-      <QuantitySelector onChange={onChange} quantity={quantity} />
-      <OrderSummary onChange={onChange} />
+      <PizzaDetail onChange={onChange} data={data} />
+      <SizeSelection onChange={onChange} data={data} />
+      <Hamur onChange={onChange} data={data} />
+      <Extras onChange={onChange} extras={extras} data={data}/>
+      <Name onChange={onChange}  data={data}/>
+      <OrderNote onChange={onChange} data={data} />
+      <QuantitySelector onChange={onChange} quantity={quantity} data={data} />
+      <OrderSummary onChange={onChange} extras={extras} quantity={quantity} data={data} />
       </form>
     </>
   );

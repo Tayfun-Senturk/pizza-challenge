@@ -1,16 +1,16 @@
 import React from 'react';
 import '../index.css';
 
-const OrderSummary = () => {
+const OrderSummary = ({extras,quantity,data}) => {
     return (
       <div>
         <h3>Sipariş Toplamı</h3>
         <div>
-            <span>Seçimler</span><span>25.00tl</span>
-            <span>Toplam</span><span>110.50tl</span>
+            <span>Seçimler</span><span>{(extras.length*5)*quantity}</span>
+            <span>Toplam</span><span>{(85.50+(extras.length*5))*quantity}</span>
     
         </div>
-        <button type='submit' id='siparişver'>SİPARİŞ VER</button>
+        <button type='submit' id='siparişver' disabled={data.isim.length<3||extras.length<4}  >SİPARİŞ VER</button>
       </div>
     );
   };

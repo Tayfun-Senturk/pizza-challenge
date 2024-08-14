@@ -22,7 +22,7 @@ const Extras = ({onChange,extras}) => {
       const extra= (mat)=> {
         return (
              <>
-                <input type='checkbox' id={mat} name={mat} value={mat} key={mat} onChange={onChange} className='checkboxes' disabled={extras.length>=10} ></input>
+                <input type='checkbox' id={mat} name={mat} value={mat} key={mat} onChange={onChange} className='checkboxes' disabled={extras.length>=10 && !document.getElementById(mat).checked} ></input>
                 <label htmlFor={mat}>{mat}</label>
              </>
             )

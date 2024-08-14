@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Form from './components/Form';
 
 const App = () => {
-  const [data, setData] = useState([]);
+
+  const initialData = { isim: '' };
+  const [data, setData] = useState(initialData);
   const [extras, setExtras] = useState([])
   const [quantity,setQuantity] = useState(1)
 
@@ -28,15 +30,14 @@ const App = () => {
         [name]: value
       }));
     }
-    console.log(event.target)
+  
     console.log(data);
     console.log(extras)
-    console.log(quantity)
   };
 
   return (
     <>
-      <Form onChange={handleChange} quantity={quantity} extras={extras}/>
+      <Form onChange={handleChange} quantity={quantity} extras={extras} data={data}/>
     </>
   );
 };
