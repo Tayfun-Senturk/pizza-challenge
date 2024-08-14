@@ -3,13 +3,13 @@ import '../index.css';
 
 const OrderNote = ({onChange}) => {
     return (
-      <div>
+      <div className='orderNote'>
         <h3>Sipariş Notu</h3>
         <textarea 
           name='note' 
           onChange={onChange}
           placeholder='Siparişinize eklemek istediğiniz bir not var mı?' 
-          rows="8" 
+          rows="2" 
           cols="80">
         </textarea>
       </div>

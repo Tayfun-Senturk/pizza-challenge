@@ -13,16 +13,22 @@ import Name from './Name';
 const Form = ({ onChange,quantity,extras,data }) => {
   return (
     <>
-    <form>
+    <form className='form'>
       <Header />
+      <div className='body'>
       <PizzaDetail onChange={onChange} data={data} />
+      <div className='size'>
       <SizeSelection onChange={onChange} data={data} />
       <Hamur onChange={onChange} data={data} />
+      </div>
       <Extras onChange={onChange} extras={extras} data={data}/>
       <Name onChange={onChange}  data={data}/>
       <OrderNote onChange={onChange} data={data} />
+      <div className='summary'>
       <QuantitySelector onChange={onChange} quantity={quantity} data={data} />
       <OrderSummary onChange={onChange} extras={extras} quantity={quantity} data={data} />
+      </div>
+      </div>
       </form>
     </>
   );

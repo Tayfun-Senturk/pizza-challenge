@@ -17,13 +17,17 @@ const Extras = ({onChange,extras}) => {
         'Kabak',
         'Soğan',
         'Sarımsak',
+        "Zeytin",
+        "Mozzarella"
       ]
 
       const extra= (mat)=> {
         return (
              <>
-                <input type='checkbox' id={mat} name={mat} value={mat} key={mat} onChange={onChange} className='checkboxes' disabled={extras.length>=10 && !document.getElementById(mat).checked} ></input>
-                <label htmlFor={mat}>{mat}</label>
+             <div className='mats'>
+              <input type='checkbox' id={mat} name={mat} value={mat} key={mat} onChange={onChange} className='checkboxes' disabled={extras.length>=10 && !document.getElementById(mat).checked} ></input>
+              <label htmlFor={mat}>{mat}</label>
+            </div>
              </>
             )
        
@@ -35,7 +39,7 @@ const Extras = ({onChange,extras}) => {
     <div className='extras'>
     <h3>Ek Malzemeler</h3>
     <p>En Fazla 10 malzeme seçebilirsiniz 5₺</p>
-    <div className='extras'>
+    <div className='extras-checkboxes'>
         {materials.map(extra)}
     </div>
     {extras.length<4&&(
