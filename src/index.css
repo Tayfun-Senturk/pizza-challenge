@@ -150,8 +150,9 @@
 
 .size {
   display: flex;
-  gap: 20rem;
+ justify-content: space-between;
   margin: 2rem 0;
+  margin-right: 5rem;
 }
 
 .summary {

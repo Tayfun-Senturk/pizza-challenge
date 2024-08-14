@@ -32,8 +32,6 @@ const App = () => {
       }));
     }
   
-    console.log(data);
-    console.log(extras)
   };
 
   return (
