@@ -1,7 +1,7 @@
 import React from 'react';
 import '../index.css';
 
-const Extras = () => {
+const Extras = ({onChange,extras}) => {
 
     const materials = [
         'Pepperoni',
@@ -22,7 +22,7 @@ const Extras = () => {
       const extra= (mat)=> {
         return (
              <>
-                <input type='checkbox' id={mat} name={mat} value={mat} className='checkboxes' ></input>
+                <input type='checkbox' id={mat} name={mat} value={mat} key={mat} onChange={onChange} className='checkboxes' disabled={extras.length>=10} ></input>
                 <label htmlFor={mat}>{mat}</label>
              </>
             )
@@ -32,12 +32,15 @@ const Extras = () => {
 
   return (
     <>
-    <div className='radio'>
+    <div className='extras'>
     <h3>Ek Malzemeler</h3>
     <p>En Fazla 10 malzeme seçebilirsiniz 5₺</p>
     <div className='extras'>
         {materials.map(extra)}
     </div>
+    {extras.length<4&&(
+      <p style={{color: "red"}}>En az 4 malzeme seçmelisiniz.</p>
+    )}
     </div>
     </>
   );
