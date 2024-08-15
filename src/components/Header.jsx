@@ -7,7 +7,7 @@ const HeaderComponent = () => {
       <div className="container">
         <h1 className="site-title">Teknolojik Yemekler</h1>
         <nav className="breadcrumb">
-          <a href="#">Anasayfa</a> &gt; <a href="#">Seçenekler</a> &gt; <span>Sipariş Oluştur</span>
+          <a href="/">Anasayfa</a> &gt; <span>Sipariş Oluştur</span>
         </nav>
       </div>
     </header>

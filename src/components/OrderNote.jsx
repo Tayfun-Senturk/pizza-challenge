@@ -9,7 +9,7 @@ const OrderNote = ({onChange}) => {
           name='note' 
           onChange={onChange}
           placeholder='Siparişinize eklemek istediğiniz bir not var mı?' 
-          rows="2" 
+          rows="1" 
           cols="80">
         </textarea>
       </div>

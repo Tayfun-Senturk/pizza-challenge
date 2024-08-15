@@ -1,19 +1,19 @@
 import React from 'react';
+import '../index.css';
+import Header from '../components/Header';
+import PizzaDetail from '../components/Pizzadetail';
+import SizeSelection from '../components/SizeSelection';
+import Hamur from '../components/Hamur';
+import Extras from '../components/Extras';
+import OrderNote from '../components/OrderNote';
+import QuantitySelector from '../components/QuantitySelector';
+import OrderSummary from '../components/OrderSummary';
+import Name from '../components/Name';
 
-import Header from './Header';
-import PizzaDetail from './Pizzadetail';
-import SizeSelection from './SizeSelection';
-import Hamur from './Hamur';
-import Extras from './Extras';
-import OrderNote from './OrderNote';
-import QuantitySelector from './QuantitySelector';
-import OrderSummary from './OrderSummary';
-import Name from './Name';
-
-const Form = ({ onChange,quantity,extras,data }) => {
+const Form = ({ onChange,quantity,extras,data,onSubmit}) => {
   return (
     <>
-    <form className='form'>
+    <form onSubmit={onSubmit} className='form'>
       <Header />
       <div className='body'>
       <PizzaDetail onChange={onChange} data={data} />

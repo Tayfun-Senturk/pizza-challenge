@@ -10,14 +10,29 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .header {
   background-color: #C7372F;
   padding: 20px 0;
   color: white;
-  width: 100%;;
-
+  width: 100%;
 }
 
+.pizza-price{
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.pizza-price-rating{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.rating-count{
+  margin-left: 1rem;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -65,8 +80,8 @@
   padding: 10px 20px;
   cursor: pointer;
   font-size: 18px;
-  width: 40px;
-  height: 40px; 
+  min-width: 40px;
+  min-height: 40px; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,14 +94,15 @@
   font-size: 18px;
   border: none;
   text-align: center;
-  width: 38px; 
-  height: 38px; 
+  min-width: 38px;
+  min-height: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid gray ;
   border-top: 1px solid gray;
 }
+
 
 .extras {
   margin: 20px 0;
@@ -105,7 +121,7 @@
 
 .extras-checkboxes {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px 20px;
 }
 
@@ -138,65 +154,167 @@
 }
 
 .body {
-  max-width: 35%;
+  max-width: 40%;
+  min-width: 35%;
   margin: auto;
 }
-.orderNote{
+
+
+.orderNote {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.orderNote h3 {
+  display: block;
+}
+
+.orderNote textarea {
+  width: 100%;
+  padding: 1rem; 
+  font-size: 16px; 
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .size {
   display: flex;
- justify-content: space-between;
+  justify-content: space-between;
   margin: 2rem 0;
-  margin-right: 5rem;
 }
 
 .summary {
   display: flex;
   flex-direction: row;
-  justify-content: space-around
+  justify-content: space-around;
+  border-top: 1px solid gray;
+  padding-top: 2rem;
 }
 
 .toplam {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 300px;
-    background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  width: 40%;
+}
+
+.toplam h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ücret {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.order {
+  background-color: #fdd835;
+  color: #000;
+  padding: 12px;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.order:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+
+@media (max-width: 750px) {
+
+  .header {
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .body{
+    max-width: 90%;
+  }
+
+
+  .container {
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .site-title {
+    font-size: 20px;
+  }
+
+  .breadcrumb {
+    
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .quantities {
     width: 100%;
+    justify-content: center;
+  }
+
+  .quantity, .adet {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .extras-checkboxes {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px 10px;
+  }
+
+  .extras-checkboxes label {
+    font-size: 14px;
+  }
+
+
+  .orderNote textarea {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
+
+  .size {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem 0;
+  }
+
+  .summary {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  .toplam {
+    max-width: 100%;
+    padding: 10px;
   }
 
   .toplam h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 16px;
   }
 
   .ücret {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  
-  .order {
-    background-color: #fdd835;
-    color: #000;
-    padding: 12px;
-    text-align: center;
-    border-radius: 0 0 8px 8px;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    width: 100%;
+    font-size: 12px;
   }
 
-  .order:disabled {
-    background-color: gray;
-    cursor: not-allowed;
+  .order {
+    padding: 10px;
+    font-size: 14px;
   }
+}
