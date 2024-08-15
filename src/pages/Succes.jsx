@@ -1,12 +1,14 @@
 import React from 'react';
-
+import "./succes.css";
 
 const Succes = () => {
-    console.log("renderlandı")
+    console.log("renderlandı");
 
     return (
-        <div>
-            <p>BAŞARILI</p>
+        <div className="success-container">
+            <h1>Teknolojik Yemekler</h1>
+            <p>TEBRİKLER!</p>
+            <p>SİPARİŞİNİZ ALINDI!</p>
         </div>
     );
 };

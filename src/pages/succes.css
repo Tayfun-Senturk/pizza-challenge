@@ -1,0 +1,29 @@
+.success-container {
+    margin: 0;
+    padding: 0;
+    background-color: #CE2829; 
+    color: #FAF7F2; 
+    font-family: "Roboto Condensed", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.success-container h1 {
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.success-container p {
+    font-size: 2em;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    margin: 0.5em 0;
+}
