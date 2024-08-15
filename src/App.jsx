@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Form from './pages/Form';
 import Home from './pages/Home';
-import Succes from './pages/Succes';
+import Success from './pages/Success';
 import './index.css';
 import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom';
 import axios from 'axios';
@@ -50,7 +50,7 @@ const App = () => {
     try {
       const response = await axios.post('https://reqres.in/api/pizza', Datas);
       console.log('Order submitted successfully:', response.data);
-      history.push('/succes')
+      history.push('/success')
     } catch (error) {
       console.error('There was an error submitting the order:', error);
     }
@@ -65,8 +65,8 @@ const App = () => {
         <Route exact path="/form">
           <Form onSubmit={handleSubmit} onChange={handleChange} quantity={quantity} extras={extras} data={data} />
         </Route>
-        <Route exact path="/succes">
-          <Succes />
+        <Route exact path="/success">
+          <Success />
         </Route>
       </Switch>
   );

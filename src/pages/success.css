@@ -16,14 +16,19 @@
     margin: 0;
     position: absolute;
     top: 20px;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05rem;
 }
 
 .success-container p {
-    font-size: 2em;
+    font-size: 4rem;
     line-height: 1.5;
-    letter-spacing: 0.1em;
-    margin: 0.5em 0;
+    letter-spacing: 0.1rem;
+    margin: 0.5rem 0;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
 }
