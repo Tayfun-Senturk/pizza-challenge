@@ -11,6 +11,7 @@ import OrderSummary from '../components/OrderSummary';
 import Name from '../components/Name';
 
 const Form = ({ onChange,quantity,extras,data,onSubmit}) => {
+
   return (
     <>
     <form onSubmit={onSubmit} className='form'>

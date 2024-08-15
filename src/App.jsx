@@ -58,7 +58,6 @@ const App = () => {
 
 
   return (
-    <Router>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -70,7 +69,6 @@ const App = () => {
           <Succes />
         </Route>
       </Switch>
-    </Router>
   );
 };
 
