@@ -49,10 +49,13 @@ const App = () => {
 
     try {
       const response = await axios.post('https://reqres.in/api/pizza', Datas);
-      console.log('Order submitted successfully:', response.data);
+      console.log('Sipariş başarıyla alındı:', response.data);
       history.push('/success')
+      setData(initialData)
+      setExtras([])
+      setQuantity(1)
     } catch (error) {
-      console.error('There was an error submitting the order:', error);
+      console.error('Siparişini oluşturmaya çalışırken bir hata meydana geldi.', error);
     }
   };
 
