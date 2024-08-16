@@ -10,7 +10,7 @@ const OrderSummary = ({extras,quantity,data}) => {
             <span>Toplam = {(85.50+(extras.length*5))*quantity}</span>
     
         </div>
-        <button className='order' type='submit' id='siparişver' disabled={data.isim.length<3||extras.length<4}  >SİPARİŞ VER</button>
+        <button data-cy="siparişver" className='order' type='submit' id='siparişver' disabled={data.isim.length<3||extras.length<4}  >SİPARİŞ VER</button>
       </div>
     );
   };

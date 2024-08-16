@@ -6,6 +6,7 @@ const Name = ({onChange,data}) => {
       <div>
         <h3>İsim</h3>
         <input 
+        data-cy="isim"
         type='text'
           name='isim' 
           value={data.isim}

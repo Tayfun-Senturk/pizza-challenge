@@ -25,7 +25,7 @@ const Extras = ({onChange,extras}) => {
         return (
              <>
              <div className='mats'>
-              <input type='checkbox' id={mat} name={mat} value={mat} key={mat} onChange={onChange} className='checkboxes' disabled={extras.length>=10 && !document.getElementById(mat).checked} ></input>
+              <input data-cy={mat} type='checkbox' id={mat} name={mat} value={mat} key={mat} onChange={onChange} className='checkboxes' disabled={extras.length>=10 && !document.getElementById(mat).checked} checked={extras.includes(mat)} ></input>
               <label htmlFor={mat}>{mat}</label>
             </div>
              </>

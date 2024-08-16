@@ -14,7 +14,7 @@ function handleClick() {
                 <img  src={logo} alt="Logo" />
                 <p>KOD ACIKTIRIR</p>
                 <p>PİZZA, DOYURUR</p>
-                <button type='button' onClick={handleClick}>ACIKTIM</button>
+                <button data-cy="acıktım" type='button' onClick={handleClick}>ACIKTIM</button>
             </div>
         </div>
     );
